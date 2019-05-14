@@ -6,11 +6,10 @@ let AddUnit = new Schema({
     type: String
   },
   unitPrice: {
-    type: number
-  }, 
-  {
-    collection: 'addunits'
+    type: Number
   }
+}, {
+  collection: 'addunits'
 });
 
 module.exports = mongoose.model('AddUnit', AddUnit);

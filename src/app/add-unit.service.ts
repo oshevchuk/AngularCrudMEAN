@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class AddUnitService {
 
   constructor() { }
+
+  addUnit(name, price) {
+    console.log(name, price);
+  }
 }

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const adddUnitRoutes = express.Router();
+const addUnitRoutes = express.Router();
 
 let AddUnit = require('../models/AddUnit');
 

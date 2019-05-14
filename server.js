@@ -5,6 +5,10 @@ let express = require('express'),
   mongoose = require('mongoose'),
   config = require('./bakend/config/DB');
 
+const addUnitRoutes = require('./bakend/routes/addunit.route');
+
+const app = express();
+
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB).then(
   () => {
@@ -15,9 +19,11 @@ mongoose.connect(config.DB).then(
   }
 );
 
-const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use('/addunits', addUnitRoutes);
+
 const port = process.env.PORT || 4000;
 
 const server = app.listen(port, function() {

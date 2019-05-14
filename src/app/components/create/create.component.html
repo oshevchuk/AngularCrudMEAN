@@ -1,19 +1,19 @@
 <div class="card">
   <div class="card-body">
-    <form>
+    <!--<form >-->
       <div class="form-group">
         <label for="" class="col-md-4">Unit Name</label>
-        <input type="text" class="form-control" name="unit_name">
+        <input type="text" class="form-control" [(ngModel)]="name">
       </div>
 
       <div class="form-group">
         <label for="" class="col-md-4">Unit Price</label>
-        <input type="text" class="form-control" name="unit_price">
+        <input type="text" class="form-control" [(ngModel)]="price">
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create init</button>
+        <button type="submit" class="btn btn-primary" (click)="addUnit()">Create init</button>
       </div>
 
-    </form>
+    <!--</form>-->
   </div>
 </div>

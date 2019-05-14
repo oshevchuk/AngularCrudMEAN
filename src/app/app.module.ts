@@ -10,18 +10,22 @@ import { EditComponent } from './components/edit/edit.component';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     CreateComponent,
     IndexComponent,
-    EditComponent
+    EditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlimLoadingBarModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [AddUnitService],
   bootstrap: [AppComponent]
