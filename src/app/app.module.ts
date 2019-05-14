@@ -1,3 +1,4 @@
+import { AddUnitService } from './add-unit.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,6 +8,7 @@ import { CreateComponent } from './components/create/create.component';
 import { IndexComponent } from './components/index/index.component';
 import { EditComponent } from './components/edit/edit.component';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlimLoadingBarModule
+    SlimLoadingBarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AddUnitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
